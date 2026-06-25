@@ -1,0 +1,79 @@
+/* =====================================================================
+   LM Visuals — Design Tokens
+   Direction: "Amber Gallery" — warm cinematic dark-luxury editorial.
+   Change a value here and it cascades everywhere.
+   ===================================================================== */
+:root {
+  /* ---- Color ---- */
+  --bg: oklch(16% 0.012 60);
+  --bg-deep: oklch(11% 0.01 55);
+  --surface: oklch(20% 0.014 62);
+  --surface-raised: oklch(25% 0.016 64);
+  --text: oklch(95% 0.012 80);
+  --text-muted: oklch(74% 0.018 75);
+  --line: oklch(34% 0.016 66);
+  --line-soft: oklch(34% 0.016 66 / 0.5);
+  --accent: oklch(80% 0.135 73);
+  --accent-strong: oklch(72% 0.15 65);
+  --accent-soft: oklch(80% 0.135 73 / 0.14);
+  --accent-contrast: oklch(18% 0.02 60);
+
+  /* ---- Typography ---- */
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-eyebrow: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lead: clamp(1.15rem, 1rem + 0.7vw, 1.5rem);
+  --fs-h4: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  --fs-h3: clamp(1.5rem, 1.2rem + 1.4vw, 2.4rem);
+  --fs-h2: clamp(2rem, 1.4rem + 3vw, 4rem);
+  --fs-hero: clamp(3rem, 1.2rem + 11vw, 11rem);
+
+  --lh-tight: 0.96;
+  --lh-snug: 1.12;
+  --lh-body: 1.6;
+  --tracking-wide: 0.18em;
+  --tracking-tight: -0.02em;
+
+  /* ---- Spacing ---- */
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-section: clamp(4.5rem, 3rem + 7vw, 9rem);
+
+  /* ---- Layout ---- */
+  --container: 1280px;
+  --container-narrow: 880px;
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 3.5rem);
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation ---- */
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.3);
+  --shadow-md: 0 18px 40px -24px oklch(0% 0 0 / 0.7);
+  --shadow-lg: 0 40px 90px -40px oklch(0% 0 0 / 0.85);
+  --shadow-glow: 0 0 0 1px var(--accent-soft), 0 20px 60px -30px oklch(80% 0.135 73 / 0.4);
+
+  /* ---- Motion ---- */
+  --dur-fast: 180ms;
+  --dur-base: 420ms;
+  --dur-slow: 820ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---- Z-index scale ---- */
+  --z-grain: 1;
+  --z-content: 2;
+  --z-nav: 80;
+  --z-overlay: 100;
+  --z-cursor: 99999; /* must sit above nav + overlays so it never hides behind them */
+}

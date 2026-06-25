@@ -1,0 +1,278 @@
+/* =====================================================================
+   LM Visuals — Components: buttons, marquee, gallery, lightbox, reel
+   ===================================================================== */
+
+/* ---------- Buttons ---------- */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  isolation: isolate;
+  transition: transform var(--dur-fast) var(--ease-out),
+              background-color var(--dur-base) var(--ease-in-out),
+              color var(--dur-base) var(--ease-in-out),
+              border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+}
+.btn:active { transform: translateY(1px) scale(0.99); }
+.btn__arrow { transition: transform var(--dur-base) var(--ease-out); }
+.btn:hover .btn__arrow { transform: translateX(4px); }
+
+.btn--accent { background: var(--accent); color: var(--accent-contrast); }
+.btn--accent:hover { box-shadow: var(--shadow-glow); background: var(--accent-strong); }
+
+.btn--ghost { border-color: var(--line); color: var(--text); background: oklch(100% 0 0 / 0.02); }
+.btn--ghost:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+.btn--lg { padding: 1.1rem 2rem; font-size: 1rem; }
+.btn--sm { padding: 0.65rem 1.1rem; font-size: 0.85rem; }
+.btn--block { width: 100%; }
+
+/* ---------- Marquee ---------- */
+.marquee {
+  overflow: hidden;
+  border-block: 1px solid var(--line-soft);
+  background: var(--bg-deep);
+  padding-block: clamp(1rem, 0.6rem + 1vw, 1.8rem);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee__track {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-scroll 38s linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__item {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1rem + 2vw, 2.6rem);
+  font-style: italic;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.marquee__item::after {
+  content: "✦";
+  font-size: 0.6em;
+  font-style: normal;
+  color: var(--accent);
+}
+
+/* ---------- Gallery ---------- */
+.gallery__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: var(--space-lg);
+}
+.gallery-filter {
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              background-color var(--dur-fast) var(--ease-out);
+}
+.gallery-filter:hover { color: var(--text); border-color: var(--text-muted); }
+.gallery-filter.is-active {
+  color: var(--accent-contrast);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* True masonry: each photo keeps its real aspect ratio — never cropped.
+   `columns` flows tiles into balanced columns; intrinsic img width/height
+   (set in JS) reserves exact space so nothing shifts as images load. */
+.gallery {
+  columns: 3 300px;
+  column-gap: clamp(0.6rem, 0.3rem + 1vw, 1rem);
+}
+.g-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 clamp(0.6rem, 0.3rem + 1vw, 1rem);
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: linear-gradient(150deg, var(--surface-raised), var(--bg-deep));
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+}
+.g-item img {
+  display: block;
+  width: 100%;
+  height: auto;            /* full frame, true ratio — no cropping */
+  position: relative;
+  z-index: 1;
+  transition: transform var(--dur-slow) var(--ease-out), opacity var(--dur-base);
+}
+/* gradient placeholder box, shown only when a photo is missing */
+.g-item--ph { aspect-ratio: var(--ar, 4 / 3); }
+.g-item::before {
+  content: attr(data-label);
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--text-muted);
+  opacity: 0.5;
+  z-index: 0;
+}
+.g-item:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+.g-item:hover img { transform: scale(1.04); }
+.g-item__cap {
+  position: absolute;
+  inset-inline: 0; bottom: 0;
+  z-index: 2;
+  padding: 1.4rem 1rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text);
+  background: linear-gradient(to top, oklch(8% 0.01 55 / 0.85), transparent);
+  transform: translateY(8px);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.g-item:hover .g-item__cap,
+.g-item:focus-visible .g-item__cap { opacity: 1; transform: none; }
+.g-item__cap b { color: var(--accent); font-weight: 600; }
+.g-item.is-hidden { display: none; }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 0.5rem + 3vw, 4rem);
+  background: oklch(8% 0.01 55 / 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-base) var(--ease-out), visibility var(--dur-base);
+}
+.lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox__stage {
+  position: relative;
+  max-width: min(1100px, 100%);
+  max-height: 84vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  transform: scale(0.97);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.lightbox.is-open .lightbox__stage { transform: none; }
+.lightbox__img {
+  max-width: 100%;
+  max-height: 78vh;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  object-fit: contain;
+  background: var(--surface);
+}
+.lightbox__cap {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+.lightbox__cap b { color: var(--accent); }
+.lightbox__btn {
+  position: absolute;
+  display: grid; place-items: center;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: oklch(11% 0.01 55 / 0.7);
+  color: var(--text);
+  font-size: 1.4rem;
+  transition: background-color var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast);
+}
+.lightbox__btn:hover { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
+.lightbox__close { top: -4px; right: -4px; }
+.lightbox__prev { left: -8px; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: -8px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 680px) {
+  .lightbox__prev { left: 4px; }
+  .lightbox__next { right: 4px; }
+  .lightbox__close { top: -42px; right: 0; }
+}
+
+/* ---------- Showreel band ---------- */
+.reel {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 21 / 9;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(120deg, oklch(22% 0.05 60), oklch(13% 0.02 50));
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line-soft);
+}
+.reel__scrim { position: absolute; inset: 0; background: oklch(8% 0.01 55 / 0.35); }
+.reel__play {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text);
+}
+.reel__disc {
+  width: clamp(64px, 6vw, 92px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  display: grid;
+  place-items: center;
+  transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-base);
+}
+.reel__disc::before {
+  content: "";
+  width: 0; height: 0;
+  border-left: 16px solid var(--accent);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  margin-left: 4px;
+}
+.reel__play:hover .reel__disc { transform: scale(1.08); background: var(--accent); }
+.reel__play:hover .reel__disc::before { border-left-color: var(--accent-contrast); }
+.reel__label { font-size: 0.78rem; letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+.reel iframe, .reel video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; z-index: 3; }

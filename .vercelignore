@@ -1,0 +1,3 @@
+# Source photo dropbox — originals, contact sheets, and any AI-generated images.
+# The live site only uses the optimized copies in /media, so keep this off Vercel.
+Photos

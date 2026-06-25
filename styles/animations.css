@@ -1,0 +1,48 @@
+/* =====================================================================
+   LM Visuals — Animations: keyframes + scroll-reveal scaffolding
+   GSAP drives most reveals (see scripts/animations.js). Elements stay
+   visible by default so the page is never blank if JS/CDN fails.
+   ===================================================================== */
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ken-burns {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.07); }
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { transform: scaleY(0.4); opacity: 0.4; transform-origin: top; }
+  50%      { transform: scaleY(1);   opacity: 1;   transform-origin: top; }
+}
+
+/* slow drift on the active hero slide for cinematic life */
+.hero__slide.is-active {
+  animation: ken-burns 14s var(--ease-in-out) alternate infinite;
+}
+
+.hero__scroll i { animation: scroll-pulse 2.6s var(--ease-in-out) infinite; }
+
+/* When GSAP is present we add this class to <html>; it lets us pre-hide
+   only reveal targets, killing the first-paint flash. If GSAP never loads,
+   the class is never added and everything stays visible. */
+.gsap-ready [data-reveal] { opacity: 0; will-change: transform, opacity; }
+.gsap-ready [data-reveal="up"]    { transform: translateY(34px); }
+.gsap-ready [data-reveal="left"]  { transform: translateX(-30px); }
+.gsap-ready [data-reveal="right"] { transform: translateX(30px); }
+.gsap-ready [data-reveal="scale"] { transform: scale(0.96); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide.is-active { animation: none; }
+  .hero__scroll i { animation: none; }
+  .gsap-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .marquee__track { animation: none !important; }
+}

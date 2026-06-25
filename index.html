@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>LM Visuals | Sports, Real Estate & Event Photography in the GTA</title>
+  <meta name="description" content="LM Visuals is Luka Moro's photography and videography studio in the Greater Toronto Area. Sharp, cinematic work for sports, portraits, real estate, and events, with packages to fit any shoot. Book yours today." />
+  <meta name="keywords" content="GTA photographer, Toronto videographer, sports photography Toronto, real estate photography GTA, event photography Toronto, real estate video, sports highlight video, Luka Moro, LM Visuals, cinematic photography" />
+  <meta name="author" content="Luka Moro, LM Visuals" />
+  <link rel="canonical" href="https://lm-visuals-rho.vercel.app/" />
+
+  <!-- iOS / PWA -->
+  <meta name="theme-color" content="#16130f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="LM Visuals" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+  <!-- Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LM Visuals | Cinematic Photography & Videography in the GTA" />
+  <meta property="og:description" content="Gallery-grade, cinematic work for sports, real estate, and events across the Greater Toronto Area. Book your shoot with Luka Moro." />
+  <meta property="og:image" content="https://lm-visuals-rho.vercel.app/icons/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://lm-visuals-rho.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://lm-visuals-rho.vercel.app/icons/og-image.png" />
+
+  <!-- LCP hero image preload (kicks in once media/hero/hero-01.jpg exists) -->
+  <link rel="preload" as="image" href="media/sports/sports-01.jpg" fetchpriority="high" />
+
+  <!-- Fonts (non-blocking: main.js flips media to 'all'; noscript covers JS-off) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link id="gfont" media="print" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pricing.css" />
+  <link rel="stylesheet" href="styles/forms.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "LM Visuals",
+    "description": "Photography and videography studio by Luka Moro serving the Greater Toronto Area: sports, real estate, and events.",
+    "image": "https://lm-visuals-rho.vercel.app/media/hero/hero-01.jpg",
+    "email": "lukamoro.visuals@gmail.com",
+    "areaServed": "Greater Toronto Area",
+    "founder": "Luka Moro",
+    "priceRange": "$$",
+    "url": "https://lm-visuals-rho.vercel.app/"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <a href="#work" class="skip-link">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="site-nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand" aria-label="LM Visuals home"><img class="brand__mark" src="media/brand/lm-logo.png" alt="" aria-hidden="true" width="40" height="40" /><span class="brand__word"><b>LM</b> Visuals<span class="dot">.</span></span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#book" class="btn btn--accent btn--sm btn--nav" id="nav-book">Book a shoot <span class="btn__arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <div class="nav__progress" aria-hidden="true"><i id="scroll-progress"></i></div>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="nav__menu" id="nav-menu">
+    <a class="nav-link" href="#work">Work</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#pricing">Pricing</a>
+    <a class="nav-link" href="#contact">Contact</a>
+    <a href="#book" class="btn btn--accent btn--lg">Book a shoot <span class="btn__arrow" aria-hidden="true">→</span></a>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__slide hero__slide--1 is-active" style="background-image:url('media/hero/hero-01.jpg'), linear-gradient(135deg,#2a2118,#14100b)"></div>
+        <div class="hero__slide hero__slide--2" style="background-image:url('media/hero/hero-02.jpg'), linear-gradient(135deg,#2c1f16,#15110c)"></div>
+        <div class="hero__slide hero__slide--3" style="background-image:url('media/hero/hero-03.jpg'), linear-gradient(135deg,#271d2a,#130f0a)"></div>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="eyebrow">Photography &amp; Videography in the GTA &amp; beyond</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="line__inner">Stillness</span></span>
+          <span class="line"><span class="line__inner">in full</span></span>
+          <span class="line"><span class="line__inner"><em>motion.</em></span></span>
+        </h1>
+        <p class="hero__subhead">Luka Moro frames athletes mid-flight, rooms drenched in their best light, and the quiet electricity of a crowd that came to celebrate. Gallery-grade images and cinematic film, made to be felt.</p>
+        <div class="hero__cta">
+          <a href="#book" class="btn btn--accent btn--lg">Book a shoot <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a href="#work" class="btn btn--ghost btn--lg">See the work</a>
+        </div>
+      </div>
+      <a href="#work" class="hero__scroll" aria-label="Scroll to work">Scroll <i aria-hidden="true"></i></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Cinematic</span>
+        <span class="marquee__item">Gallery-grade</span>
+        <span class="marquee__item">Sports</span>
+        <span class="marquee__item">Real Estate</span>
+        <span class="marquee__item">Events</span>
+        <span class="marquee__item">GTA &amp; beyond</span>
+        <span class="marquee__item">Deliberate light</span>
+        <span class="marquee__item">Honest color</span>
+        <span class="marquee__item">Made to be felt</span>
+        <span class="marquee__item">Book a shoot</span>
+        <!-- duplicate set for seamless loop -->
+        <span class="marquee__item">Cinematic</span>
+        <span class="marquee__item">Gallery-grade</span>
+        <span class="marquee__item">Sports</span>
+        <span class="marquee__item">Real Estate</span>
+        <span class="marquee__item">Events</span>
+        <span class="marquee__item">GTA &amp; beyond</span>
+        <span class="marquee__item">Deliberate light</span>
+        <span class="marquee__item">Honest color</span>
+        <span class="marquee__item">Made to be felt</span>
+        <span class="marquee__item">Book a shoot</span>
+      </div>
+    </div>
+
+    <!-- ============ WORK / GALLERY ============ -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head" data-reveal="up">
+          <p class="eyebrow">The portfolio</p>
+          <h2 class="section__title">A gallery of recent work</h2>
+          <p class="section__intro lead">A cross-section of sport, portrait, real estate, and event work from around the GTA. Tap any frame to see it full size, and picture your own project in the same light.</p>
+        </div>
+        <div class="gallery__filters" id="gallery-filters" role="group" aria-label="Filter gallery" data-reveal="up"></div>
+        <div class="gallery" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ SHOWREEL ============ -->
+    <section class="section" id="reel-section" style="padding-top:0">
+      <div class="container">
+        <div class="reel" id="reel" data-reveal="scale">
+          <div class="reel__scrim" aria-hidden="true"></div>
+          <button class="reel__play" type="button" aria-label="Play showreel">
+            <span class="reel__disc" aria-hidden="true"></span>
+            <span class="reel__label">Watch the showreel</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__media" data-parallax="0.08" data-reveal="left">
+            <img class="about__img" src="media/about/luka-portrait.jpg" alt="Luka Moro, founder of LM Visuals" loading="lazy" decoding="async" />
+            <span class="about__media-tag">Luka Moro · GTA</span>
+          </div>
+          <div class="about__body" data-reveal="right">
+            <p class="eyebrow">The artist behind the lens</p>
+            <h2 class="section__title">Meet Luka Moro</h2>
+            <div class="about__paras">
+              <p>Luka Moro treats a camera the way a painter treats a brush. Across three-plus years building LM Visuals throughout the Greater Toronto Area, he has shaped a signature you can recognize at a glance: deliberate light, honest color, and compositions that hold your eye a beat longer than you expected. Nothing here is left to luck.</p>
+              <p>His range is unusually wide for one artist. He'll follow a striker for a full ninety minutes and pull the single frame that defines the match, then turn around and light a living room until it feels warm, open, and ready to sell. What ties it all together is craft, and a bit of an obsession with the small details most people never notice but everyone feels.</p>
+              <p>Working with Luka is less like hiring a vendor and more like collaborating with someone who genuinely wants your project to outshine the brief. He's calm on a chaotic sideline, precise against a tight listing deadline, and easy company at an event where the camera should all but disappear. Premium results, zero pretension.</p>
+              <p>Based in the GTA and happy to travel a little further for a simple per-kilometre fee, Luka brings the same standard to every booking, whether it's a championship final, a new listing, or a once-in-a-lifetime celebration. You bring the subject. He brings the vision, the gear, and the finish.</p>
+            </div>
+            <blockquote class="about__quote">"I'm not here to document a thing. I'm here to make you feel it again."</blockquote>
+            <p class="about__signature">Luka Moro, Founder of LM Visuals</p>
+          </div>
+        </div>
+        <div class="about__stats" data-reveal="up">
+          <div class="stat"><div class="stat__value">3+ yrs</div><div class="stat__label">Professional experience</div></div>
+          <div class="stat"><div class="stat__value">200+</div><div class="stat__label">Shoots delivered</div></div>
+          <div class="stat"><div class="stat__value">120+</div><div class="stat__label">Happy clients</div></div>
+          <div class="stat"><div class="stat__value">48 hrs</div><div class="stat__label">Typical turnaround</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES / PRICING ============ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head section__head--center" data-reveal="up">
+          <p class="eyebrow eyebrow--center">What I shoot</p>
+          <h2 class="section__title">Four disciplines, one standard</h2>
+          <p class="section__intro lead">Sport, space, celebration, and the people in them each ask something different of a camera. Every LM Visuals service comes in tiered packages with add-ons, so the coverage fits the moment and the budget without ever cutting corners on craft.</p>
+        </div>
+        <div class="services" id="pricing-mount"></div>
+      </div>
+    </section>
+
+    <!-- ============ BOOK A SHOOT ============ -->
+    <section class="section" id="book">
+      <div class="container">
+        <div class="section__head" data-reveal="up">
+          <p class="eyebrow">Let's make something</p>
+          <h2 class="section__title">Book a shoot</h2>
+          <p class="section__intro lead">Tell Luka what you're picturing: the date, the location, the service and tier. He'll come back with a plan, a quote, and a few ideas you didn't ask for. A 50% deposit locks in your date.</p>
+        </div>
+
+        <div class="booking__grid">
+          <div>
+            <form class="form" id="booking-form" novalidate>
+              <!-- honeypot -->
+              <div class="hp-field" aria-hidden="true" style="display:none"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label></div>
+
+              <div class="form__row">
+                <div class="field">
+                  <label for="bk-name">Name <span class="req">*</span></label>
+                  <input class="input" id="bk-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+                  <span class="field__error">Please tell us your name.</span>
+                </div>
+                <div class="field">
+                  <label for="bk-email">Email <span class="req">*</span></label>
+                  <input class="input" id="bk-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required />
+                  <span class="field__error">Please enter a valid email.</span>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <label for="bk-phone">Phone</label>
+                  <input class="input" id="bk-phone" name="phone" type="tel" autocomplete="tel" placeholder="(optional)" />
+                </div>
+                <div class="field">
+                  <label for="bk-date">Preferred date <span class="req">*</span></label>
+                  <input class="input" id="bk-date" name="date" type="date" required />
+                  <span class="field__error">Please choose a preferred date.</span>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <label for="bk-service">Service</label>
+                  <select class="select" id="bk-service" name="service"></select>
+                </div>
+                <div class="field">
+                  <label for="bk-tier">Package tier</label>
+                  <select class="select" id="bk-tier" name="tier"></select>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field" id="bk-hours-field" hidden>
+                  <label for="bk-hours">Hours on site</label>
+                  <input class="input" id="bk-hours" name="hours" type="number" min="1" max="12" step="1" value="1" />
+                  <span class="field__hint">Player Pack is billed per hour.</span>
+                </div>
+                <div class="field">
+                  <label for="bk-location">Location</label>
+                  <input class="input" id="bk-location" name="location" type="text" placeholder="City / venue / address" />
+                </div>
+              </div>
+
+              <fieldset class="addon-picker field" id="bk-addons-wrap">
+                <legend>Add-ons (optional)</legend>
+                <div class="addon-picker" id="bk-addons"></div>
+              </fieldset>
+
+              <div class="field" id="bk-km-field" hidden>
+                <label for="bk-km">Travel distance outside the GTA (km)</label>
+                <input class="input" id="bk-km" name="km" type="number" min="0" step="1" placeholder="0" />
+                <span class="field__hint">Travel is billed at $0.60 / km beyond the GTA.</span>
+              </div>
+
+              <div class="field">
+                <label for="bk-message">Tell Luka about the shoot</label>
+                <textarea class="textarea" id="bk-message" name="message" placeholder="The vibe you're after, the subject, any references, must-have shots…"></textarea>
+              </div>
+
+              <!-- TERMS -->
+              <details class="terms" id="booking-terms">
+                <summary>Terms &amp; conditions <span class="chev" aria-hidden="true">▾</span></summary>
+                <ol id="terms-list">
+                  <li>A 50% deposit is required to confirm and lock in your booking; your date is not reserved until the deposit is received.</li>
+                  <li>The remaining 50% balance is due on or before the day of the shoot, prior to delivery of final images or video.</li>
+                  <li>Cancellations made less than one week (7 days) before the scheduled shoot are subject to a cancellation fee.</li>
+                  <li>Rescheduling is welcome when requested with reasonable notice and is subject to availability; the deposit transfers to the new agreed date.</li>
+                  <li>Shoots outside the Greater Toronto Area are billed a per-kilometre travel fee, quoted and agreed before the booking is confirmed.</li>
+                  <li>Final edited galleries and video are delivered within the agreed turnaround window after the shoot.</li>
+                  <li>LM Visuals retains copyright of all images and footage; clients receive a license to use deliverables for their stated personal or business purpose.</li>
+                  <li>Luka Moro may feature selected work in his portfolio and on social channels unless the client requests otherwise in writing before the shoot.</li>
+                </ol>
+                <p class="terms__key"><b>In short:</b> a <b>50% deposit books your date</b>, and <b>cancelling within a week of the shoot incurs a cancellation fee.</b></p>
+              </details>
+
+              <div class="field agree" id="bk-agree-field">
+                <label class="check">
+                  <input type="checkbox" id="bk-agree" name="agree" />
+                  <span class="check__box" aria-hidden="true"></span>
+                  <span class="check__title">I've read and agree to the terms above (50% deposit &amp; cancellation policy). <span class="req">*</span></span>
+                </label>
+                <span class="field__error">Please agree to the terms to continue.</span>
+              </div>
+
+              <button type="submit" class="btn btn--accent btn--lg form__submit">Send booking request <span class="btn__arrow" aria-hidden="true">→</span></button>
+              <p class="form__status" id="booking-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="form-success" id="booking-success" role="status">
+              <div class="form-success__mark" aria-hidden="true"></div>
+              <h3>Request received</h3>
+              <p>Got it. Your request is in Luka's hands. Expect a friendly reply within 24 hours with next steps and your booking details. Talk soon.</p>
+            </div>
+          </div>
+
+          <!-- LIVE ESTIMATE -->
+          <aside class="estimate" data-reveal="right" aria-label="Live estimate">
+            <p class="estimate__eyebrow">Live estimate</p>
+            <h3 class="estimate__title">Your shoot, roughly</h3>
+            <div class="estimate__lines" id="est-lines"></div>
+            <div class="estimate__total"><span class="k">Estimated total</span><span class="v" id="est-total">$0</span></div>
+            <div class="estimate__deposit"><span>Deposit to book (50%)</span><b id="est-deposit">$0</b></div>
+            <p class="estimate__note">Estimates are a guide, not a final quote. Travel beyond the GTA and custom requests are confirmed by Luka before any deposit. Prices in CAD.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container container--narrow">
+        <div class="contact__grid">
+          <div class="contact__aside" data-reveal="left">
+            <p class="eyebrow">Say hello</p>
+            <h2 class="section__title">Start a conversation</h2>
+            <p class="lead">Questions, custom packages, or a wild idea you want to pull off? Reach Luka directly. He reads every message and replies like a real person, not an auto-reply.</p>
+            <a class="contact__email" href="mailto:lukamoro.visuals@gmail.com">lukamoro.visuals@gmail.com</a>
+          </div>
+          <div data-reveal="right">
+            <form class="form" id="contact-form" novalidate>
+              <div class="hp-field" aria-hidden="true" style="display:none"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label></div>
+              <div class="field">
+                <label for="ct-name">Name <span class="req">*</span></label>
+                <input class="input" id="ct-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+                <span class="field__error">Please tell us your name.</span>
+              </div>
+              <div class="field">
+                <label for="ct-email">Email <span class="req">*</span></label>
+                <input class="input" id="ct-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required />
+                <span class="field__error">Please enter a valid email.</span>
+              </div>
+              <div class="field">
+                <label for="ct-message">Message <span class="req">*</span></label>
+                <textarea class="textarea" id="ct-message" name="message" placeholder="What's on your mind?" required></textarea>
+                <span class="field__error">Please write a short message.</span>
+              </div>
+              <button type="submit" class="btn btn--accent btn--lg form__submit">Send message <span class="btn__arrow" aria-hidden="true">→</span></button>
+              <p class="form__status" id="contact-status" role="status" aria-live="polite"></p>
+            </form>
+            <div class="form-success" id="contact-success" role="status">
+              <div class="form-success__mark" aria-hidden="true"></div>
+              <h3>Message sent</h3>
+              <p>Thanks for reaching out. Luka will get back to you shortly at the email you provided.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#home" class="nav__brand"><img class="brand__mark" src="media/brand/lm-logo.png" alt="" aria-hidden="true" width="48" height="48" /><span class="brand__word"><b>LM</b> Visuals<span class="dot">.</span></span></a>
+          <p class="footer__blurb">Photography and videography by Luka Moro. Gallery-grade stills and cinematic film for sport, real estate, and events across the Greater Toronto Area and beyond.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Explore</h5>
+          <a href="#work">Work</a>
+          <a href="#about">About Luka</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#book">Book a shoot</a>
+        </div>
+        <div class="footer__col">
+          <h5>Services</h5>
+          <a href="#service-sports">Sports</a>
+          <a href="#service-portraits">Portraits</a>
+          <a href="#service-real-estate">Real Estate</a>
+          <a href="#service-events">Events</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> LM Visuals. Light, shaped with intention. Made in the GTA by Luka Moro.</span>
+        <a href="#book">Book a shoot →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__stage">
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Close viewer">✕</button>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous image">‹</button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Next image">›</button>
+      <img class="lightbox__img" id="lightbox-img" alt="" />
+      <p class="lightbox__cap" id="lightbox-cap"></p>
+    </div>
+  </div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer integrity="sha384-O55L/6rhHr9CFvrxqv5luxOCcmVaBmETbZbJDP+Do8T0pztTACsFBD/IXCNkj7DV" crossorigin="anonymous"></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/pricing.js" defer></script>
+  <script src="scripts/gallery.js" defer></script>
+  <script src="scripts/booking.js" defer></script>
+  <script src="scripts/animations.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
