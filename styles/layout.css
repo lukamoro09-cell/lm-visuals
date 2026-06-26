@@ -210,7 +210,8 @@
   margin-top: var(--space-lg);
   max-width: 52ch;
   font-size: var(--fs-lead);
-  color: var(--text-muted);
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.85);
 }
 .hero__cta {
   margin-top: var(--space-lg);
