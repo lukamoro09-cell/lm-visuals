@@ -1,21 +1,25 @@
-MIT License
+Copyright (c) 2026 Luka Moro / LM Visuals. All rights reserved.
 
-Copyright (c) 2026 Luka Moro / LM Visuals
+This codebase and all associated assets — including but not limited to
+HTML, CSS, JavaScript, images, logos, brand marks, and written content —
+are the exclusive property of Luka Moro operating as LM Visuals.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+PERMITTED:
+- Viewing the source code for personal, non-commercial reference only.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+STRICTLY PROHIBITED without prior written permission from Luka Moro:
+- Copying, cloning, or forking this repository for commercial use.
+- Using the LM Visuals name, logo, brand identity, or any visual assets
+  to represent yourself or any other business or individual.
+- Impersonating LM Visuals or Luka Moro in any form — online, in print,
+  or through any other medium.
+- Redistributing, reselling, sublicensing, or repurposing any part of
+  this codebase or its assets.
+- Creating derivative works that replicate the look, feel, or branding
+  of LM Visuals.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The LM Visuals name, logo, and brand identity are trademarks of Luka Moro.
+Unauthorized use of these marks is a violation of trademark law and may
+result in legal action.
+
+For licensing inquiries or permissions, contact: lukamoro.visuals@gmail.com
