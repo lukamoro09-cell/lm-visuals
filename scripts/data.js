@@ -163,6 +163,7 @@
     'sports-07': [1080, 1620], 'sports-08': [1080, 1620], 'sports-09': [828, 552],
     'sports-10': [828, 560], 'sports-11': [1616, 1080], 'sports-12': [1600, 1067], 'sports-13': [828, 1242],
     'sports-16': [6000, 4000], 'sports-17': [1144, 1994], 'sports-18': [828, 1244], 'sports-19': [828, 564],
+    'sports-20': [1536, 1024],
     'portraits-01': [1370, 1800], 'portraits-02': [1524, 1800],
     'events-01': [1200, 1800], 'events-02': [1200, 1800],
     'events-03': [1306, 1800], 'events-04': [1052, 1800],
@@ -199,7 +200,7 @@
   /* Interleave categories so the default "All" view feels art-directed.
      real-estate + events-05/06 are Luka's own generated photos. */
   var groups = [
-    [1,2,3,4,5,6,7,8,9,10,11,12,13,16,17,18,19].map(function(i) {
+    [1,2,3,4,5,6,7,8,9,10,11,12,13,16,17,18,19,20].map(function(i) {
       var n = i < 10 ? '0' + i : '' + i;
       var key = 'sports-' + n;
       var d = DIMS[key] || [4, 3];
