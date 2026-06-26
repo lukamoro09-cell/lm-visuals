@@ -161,8 +161,7 @@
     'sports-01': [1800, 1200], 'sports-02': [1800, 1200], 'sports-03': [1080, 1620],
     'sports-04': [1080, 1620], 'sports-05': [1080, 1620], 'sports-06': [744, 952],
     'sports-07': [1080, 1620], 'sports-08': [1080, 1620], 'sports-09': [828, 552],
-    'sports-10': [828, 560], 'sports-11': [1616, 1080],
-    'sports-12': [1600, 1067], 'sports-13': [828, 1242], 'sports-14': [828, 552], 'sports-15': [828, 552],
+    'sports-11': [1616, 1080], 'sports-12': [1600, 1067], 'sports-13': [828, 1242],
     'portraits-01': [1370, 1800], 'portraits-02': [1524, 1800],
     'events-01': [1200, 1800], 'events-02': [1200, 1800],
     'events-03': [1306, 1800], 'events-04': [1052, 1800],
@@ -199,7 +198,12 @@
   /* Interleave categories so the default "All" view feels art-directed.
      real-estate + events-05/06 are Luka's own generated photos. */
   var groups = [
-    buildGallery('sports', 15),
+    [1,2,3,4,5,6,7,8,9,11,12,13].map(function(i) {
+      var n = i < 10 ? '0' + i : '' + i;
+      var key = 'sports-' + n;
+      var d = DIMS[key] || [4, 3];
+      return { category: 'sports', src: 'media/sports/' + key + '.jpg', alt: 'Sports work by LM Visuals, frame ' + i, w: d[0], h: d[1] };
+    }),
     buildGallery('portraits', 2),
     buildGallery('real-estate', 10),
     buildGallery('events', 6)
