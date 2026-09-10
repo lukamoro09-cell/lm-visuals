@@ -61,11 +61,19 @@
       var left = el('div');
       left.appendChild(el('div', 'addon__name', a.name));
       left.appendChild(el('div', 'addon__desc', a.desc));
-      var price = a.unit === 'perKm'
-        ? '$0.60 <small>/ km</small>'
-        : '$' + a.price + ' <small>flat</small>';
       row.appendChild(left);
-      row.appendChild(el('div', 'addon__price', price));
+      if (a.unit === 'email') {
+        var btn = document.createElement('a');
+        btn.href = 'mailto:' + a.email + '?subject=Video%20Quote%20Request&body=Hi%20Luka%2C%20I%27m%20interested%20in%20adding%20video%20coverage.%20Here%27s%20what%20I%27m%20looking%20for%3A%20';
+        btn.className = 'addon__email-btn';
+        btn.textContent = 'Request a Quote';
+        row.appendChild(btn);
+      } else {
+        var price = a.unit === 'perKm'
+          ? '$0.60 <small>/ km</small>'
+          : '$' + a.price + ' <small>flat</small>';
+        row.appendChild(el('div', 'addon__price', price));
+      }
       wrap.appendChild(row);
     });
     panel.appendChild(wrap);

@@ -12,8 +12,7 @@
   var ADDONS = [
     { id: 'rush',       name: 'Rush delivery',        desc: 'View your photos within 48 hours',                price: 75,   unit: 'flat'  },
     { id: 'extra-hour', name: 'Extra hour on site',   desc: 'Add another hour of coverage',                    price: 80,   unit: 'flat'  },
-    { id: 'social',     name: 'Social media cuts',     desc: 'Vertical cuts for Reels / TikTok / Shorts',       price: 50,   unit: 'flat'  },
-    { id: 'colour',     name: 'Colour grade upgrade',  desc: 'A hand-crafted, cinematic colour grade',          price: 55,   unit: 'flat'  },
+    { id: 'video',      name: 'Add video coverage',   desc: 'Email us to get a custom video quote',            price: 0,    unit: 'email', email: EMAIL },
     { id: 'travel',     name: 'Travel fee',            desc: 'For any location outside the GTA, $0.60 / km',     price: 0.60, unit: 'perKm' }
   ];
 
@@ -34,16 +33,16 @@
         {
           id: 'sports-athletic', badge: 'Tier 2', name: 'Athletic Bundle', popular: true,
           price: 100, unit: 'flat', priceLabel: '$100',
-          summary: 'Stills plus a short highlight reel.',
+          summary: 'Stills from a 2-hour shoot.',
           turnaround: '7-day turnaround',
-          features: ['2-hour shoot', '70 edited photos', '60–90 second highlight reel', 'Online gallery + video file', '7-day turnaround']
+          features: ['2-hour shoot', '70 edited photos', 'Online gallery delivery', '7-day turnaround']
         },
         {
           id: 'sports-gameday', badge: 'Tier 3', name: 'Full Game Day',
           price: 250, unit: 'flat', priceLabel: '$250',
-          summary: 'Full coverage, reel, and social cuts.',
+          summary: 'Full coverage of a complete event.',
           turnaround: '10-day turnaround',
-          features: ['Full event coverage (3–4 hours)', '100+ edited photos', '2–3 minute highlight reel', 'Social media cuts', 'Online gallery with all video files', '10-day turnaround']
+          features: ['Full event coverage (3–4 hours)', '100+ edited photos', 'Online gallery delivery', '10-day turnaround']
         }
       ],
       addons: ADDONS
@@ -64,16 +63,16 @@
         {
           id: 're-house', badge: 'Tier 2', name: 'House Package', popular: true,
           price: 329, unit: 'flat', priceLabel: '$329',
-          summary: 'Full homes up to 2,500 sq ft, with video.',
+          summary: 'Full homes up to 2,500 sq ft.',
           turnaround: '4-day turnaround',
-          features: ['Up to 2,500 sq ft', 'Interior & exterior photos', '40–50 edited images', '1–2 minute walk-through video', '4-day turnaround']
+          features: ['Up to 2,500 sq ft', 'Interior & exterior photos', '40–50 edited images', '4-day turnaround']
         },
         {
           id: 're-luxury', badge: 'Tier 3', name: 'Luxury Listing',
           price: 549, unit: 'flat', priceLabel: '$549',
           summary: 'Estates 2,500+ sq ft, cinematic & golden hour.',
           turnaround: '7-day turnaround',
-          features: ['2,500+ sq ft', 'Full interior & exterior photos', '60 edited images', 'Cinematic walk-through video', 'Twilight / golden-hour shoot time', '7-day turnaround']
+          features: ['2,500+ sq ft', 'Full interior & exterior photos', '60 edited images', 'Twilight / golden-hour shoot time', '7-day turnaround']
         }
       ],
       addons: ADDONS
@@ -94,16 +93,16 @@
         {
           id: 'event-standard', badge: 'Tier 2', name: 'Event Standard', popular: true,
           price: 549, unit: 'flat', priceLabel: '$549',
-          summary: 'Up to 5 hours, with a highlight reel.',
+          summary: 'Up to 5 hours of coverage.',
           turnaround: '2–3 week turnaround',
-          features: ['Up to 5 hours', '120 edited photos', '2-minute highlight reel', '2–3 week turnaround']
+          features: ['Up to 5 hours', '120 edited photos', 'Online gallery delivery', '2–3 week turnaround']
         },
         {
           id: 'event-fullday', badge: 'Tier 3', name: 'Event Full Day',
           price: 899, unit: 'flat', priceLabel: '$899',
-          summary: 'Full-day coverage and a full event film.',
+          summary: 'Full-day coverage.',
           turnaround: '2–3 week turnaround',
-          features: ['Full-day coverage (up to 8 hours)', '200 edited photos', '5-minute event film', '1-week sneak-peek', '2–3 week turnaround']
+          features: ['Full-day coverage (up to 8 hours)', '200 edited photos', '1-week sneak-peek', '2–3 week turnaround']
         }
       ],
       addons: ADDONS
