@@ -1,5 +1,5 @@
 /* =====================================================================
-   Moro Visuals — DATA (single source of truth for facts: pricing, gallery)
+   Luka Visuals — DATA (single source of truth for facts: pricing, gallery)
    Plain global, no build step. Exposed as window.LMV.
    Edit prices / features / image lists here; the UI rebuilds itself.
    ===================================================================== */
@@ -189,7 +189,7 @@
       items.push({
         category: category,
         src: 'media/' + category + '/' + key + '.' + ext,
-        alt: prettyCategory(category) + ' work by Moro Visuals, frame ' + i,
+        alt: prettyCategory(category) + ' work by Luka Visuals, frame ' + i,
         w: d[0], h: d[1]
       });
     }
@@ -203,7 +203,7 @@
       var n = i < 10 ? '0' + i : '' + i;
       var key = 'sports-' + n;
       var d = DIMS[key] || [4, 3];
-      return { category: 'sports', src: 'media/sports/' + key + '.jpg', alt: 'Sports work by Moro Visuals, frame ' + i, w: d[0], h: d[1] };
+      return { category: 'sports', src: 'media/sports/' + key + '.jpg', alt: 'Sports work by Luka Visuals, frame ' + i, w: d[0], h: d[1] };
     }),
     buildGallery('portraits', 2),
     buildGallery('real-estate', 10),
