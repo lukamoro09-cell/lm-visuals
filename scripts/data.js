@@ -12,8 +12,7 @@
   var ADDONS = [
     { id: 'rush',       name: 'Rush delivery',        desc: 'View your photos within 48 hours',                price: 75,   unit: 'flat'  },
     { id: 'extra-hour', name: 'Extra hour on site',   desc: 'Add another hour of coverage',                    price: 80,   unit: 'flat'  },
-    { id: 'raw-photos', name: 'Raw / unedited photos', desc: 'Get the unedited originals — price depends on how many photos you want ($0.15 per photo)', price: 0, unit: 'email', email: EMAIL },
-    { id: 'video',      name: 'Add video coverage',   desc: 'Email us to get a custom video quote',            price: 0,    unit: 'email', email: EMAIL },
+{ id: 'video',      name: 'Add video coverage',   desc: 'Email us to get a custom video quote',            price: 0,    unit: 'email', email: EMAIL },
     { id: 'travel',     name: 'Travel fee',            desc: 'For any location outside the GTA, $0.60 / km',     price: 0.60, unit: 'perKm' }
   ];
 
