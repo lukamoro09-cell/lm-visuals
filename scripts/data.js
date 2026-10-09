@@ -10,7 +10,7 @@
 
   /* Add-ons are identical across every service (DRY — defined once). */
   var ADDONS = [
-    { id: 'rush',       name: 'Rush delivery',        desc: 'View your photos within 48 hours',                price: 75,   unit: 'flat'  },
+    { id: 'rush',       name: 'Rush delivery',        desc: 'View some of your photos within 48 hours',                price: 75,   unit: 'flat'  },
     { id: 'extra-hour', name: 'Extra hour on site',   desc: 'Add another hour of coverage',                    price: 80,   unit: 'flat'  },
 { id: 'video',      name: 'Add video coverage',   desc: 'Email us to get a custom video quote',            price: 0,    unit: 'email', email: EMAIL },
     { id: 'travel',     name: 'Travel fee',            desc: 'For any location outside the GTA, $0.60 / km',     price: 0.60, unit: 'perKm' }
