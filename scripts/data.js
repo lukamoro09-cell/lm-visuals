@@ -12,6 +12,7 @@
   var ADDONS = [
     { id: 'rush',       name: 'Rush delivery',        desc: 'View your photos within 48 hours',                price: 75,   unit: 'flat'  },
     { id: 'extra-hour', name: 'Extra hour on site',   desc: 'Add another hour of coverage',                    price: 80,   unit: 'flat'  },
+    { id: 'raw-photos', name: 'Raw / unedited photos', desc: 'Get the unedited originals — price depends on how many photos you want ($0.15 per photo)', price: 0, unit: 'email', email: EMAIL },
     { id: 'video',      name: 'Add video coverage',   desc: 'Email us to get a custom video quote',            price: 0,    unit: 'email', email: EMAIL },
     { id: 'travel',     name: 'Travel fee',            desc: 'For any location outside the GTA, $0.60 / km',     price: 0.60, unit: 'perKm' }
   ];
@@ -85,21 +86,21 @@
       tiers: [
         {
           id: 'event-starter', badge: 'Tier 1', name: 'Event Starter',
-          price: 449, unit: 'flat', priceLabel: '$449',
+          price: 0, unit: 'contact', priceLabel: 'Get a quote',
           summary: 'Up to 3 hours of coverage.',
           turnaround: '2-week turnaround',
           features: ['Up to 3 hours', '75 edited photos', 'Online gallery delivery', '2-week turnaround']
         },
         {
           id: 'event-standard', badge: 'Tier 2', name: 'Event Standard', popular: true,
-          price: 749, unit: 'flat', priceLabel: '$749',
+          price: 0, unit: 'contact', priceLabel: 'Get a quote',
           summary: 'Up to 5 hours of coverage.',
           turnaround: '2–3 week turnaround',
           features: ['Up to 5 hours', '120 edited photos', 'Online gallery delivery', '2–3 week turnaround']
         },
         {
           id: 'event-fullday', badge: 'Tier 3', name: 'Event Full Day',
-          price: 1199, unit: 'flat', priceLabel: '$1,199',
+          price: 0, unit: 'contact', priceLabel: 'Get a quote',
           summary: 'Full-day coverage.',
           turnaround: '2–3 week turnaround',
           features: ['Full-day coverage (up to 8 hours)', '200 edited photos', '1-week sneak-peek', '2–3 week turnaround']

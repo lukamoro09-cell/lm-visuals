@@ -33,14 +33,22 @@
     tier.features.forEach(function (f) { feats.appendChild(el('li', null, '<span>' + f + '</span>')); });
 
     var foot = el('div', 'tier__foot');
-    var book = el('button', 'btn btn--accent', 'Book this package <span class="btn__arrow" aria-hidden="true">→</span>');
-    book.type = 'button';
-    book.addEventListener('click', function () {
-      document.dispatchEvent(new CustomEvent('lmv:book', {
-        detail: { serviceId: service.id, tierId: tier.id }
-      }));
-    });
-    foot.appendChild(book);
+    if (tier.unit === 'contact') {
+      var contactBtn = document.createElement('a');
+      contactBtn.href = 'mailto:' + window.LMV.email + '?subject=' + encodeURIComponent('Event Photography — ' + tier.name) + '&body=' + encodeURIComponent('Hi Luka,\n\nI\'m interested in the ' + tier.name + ' package. Here are some details about my event:\n\n');
+      contactBtn.className = 'btn btn--accent';
+      contactBtn.innerHTML = 'Get a quote <span class="btn__arrow" aria-hidden="true">→</span>';
+      foot.appendChild(contactBtn);
+    } else {
+      var book = el('button', 'btn btn--accent', 'Book this package <span class="btn__arrow" aria-hidden="true">→</span>');
+      book.type = 'button';
+      book.addEventListener('click', function () {
+        document.dispatchEvent(new CustomEvent('lmv:book', {
+          detail: { serviceId: service.id, tierId: tier.id }
+        }));
+      });
+      foot.appendChild(book);
+    }
     foot.appendChild(el('span', 'tier__turn', '◷ ' + tier.turnaround));
 
     tier_.appendChild(aside);
