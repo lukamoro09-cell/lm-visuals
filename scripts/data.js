@@ -26,21 +26,21 @@
       tiers: [
         {
           id: 'sports-player', badge: 'Tier 1', name: 'Player Pack',
-          price: 120, unit: 'hour', priceLabel: '$120', priceSuffix: '/ hour',
+          price: 40, unit: 'hour', priceLabel: '$40', priceSuffix: '/ hour',
           summary: 'A focused session for a single athlete.',
           turnaround: '4-day turnaround', defaultHours: 1,
           features: ['50 edited photos', 'Online gallery delivery', '4-day turnaround']
         },
         {
           id: 'sports-athletic', badge: 'Tier 2', name: 'Athletic Bundle', popular: true,
-          price: 275, unit: 'flat', priceLabel: '$275',
+          price: 100, unit: 'flat', priceLabel: '$100',
           summary: 'Stills from a 2-hour shoot.',
           turnaround: '7-day turnaround',
           features: ['2-hour shoot', '70 edited photos', 'Online gallery delivery', '7-day turnaround']
         },
         {
           id: 'sports-gameday', badge: 'Tier 3', name: 'Full Game Day',
-          price: 499, unit: 'flat', priceLabel: '$499',
+          price: 250, unit: 'flat', priceLabel: '$250',
           summary: 'Full coverage of a complete event.',
           turnaround: '10-day turnaround',
           features: ['Full event coverage (3–4 hours)', '100+ edited photos', 'Online gallery delivery', '10-day turnaround']
@@ -85,25 +85,16 @@
       description: 'Candid, atmospheric coverage of the moments that matter, delivered as a gallery and a film you will actually rewatch.',
       tiers: [
         {
-          id: 'event-starter', badge: 'Tier 1', name: 'Event Starter',
+          id: 'event-custom', badge: 'Custom', name: 'Custom Event Package',
           price: 0, unit: 'contact', priceLabel: 'Get a quote',
-          summary: 'Up to 3 hours of coverage.',
-          turnaround: '2-week turnaround',
-          features: ['Up to 3 hours', '75 edited photos', 'Online gallery delivery', '2-week turnaround']
-        },
-        {
-          id: 'event-standard', badge: 'Tier 2', name: 'Event Standard', popular: true,
-          price: 0, unit: 'contact', priceLabel: 'Get a quote',
-          summary: 'Up to 5 hours of coverage.',
-          turnaround: '2–3 week turnaround',
-          features: ['Up to 5 hours', '120 edited photos', 'Online gallery delivery', '2–3 week turnaround']
-        },
-        {
-          id: 'event-fullday', badge: 'Tier 3', name: 'Event Full Day',
-          price: 0, unit: 'contact', priceLabel: 'Get a quote',
-          summary: 'Full-day coverage.',
-          turnaround: '2–3 week turnaround',
-          features: ['Full-day coverage (up to 8 hours)', '200 edited photos', '1-week sneak-peek', '2–3 week turnaround']
+          summary: 'Tell me about your event and I\'ll put together the right package.',
+          turnaround: 'Turnaround discussed on booking',
+          features: [
+            'How many hours do you need coverage?',
+            'How many edited photos are you looking for?',
+            'What type of event is it?',
+            'Any special requests or moments to capture?'
+          ]
         }
       ],
       addons: ADDONS
@@ -116,21 +107,21 @@
       tiers: [
         {
           id: 'portrait-mini', badge: 'Tier 1', name: 'Mini Session',
-          price: 99, unit: 'flat', priceLabel: '$99',
+          price: 30, unit: 'flat', priceLabel: '$30',
           summary: 'A quick, focused sitting.',
           turnaround: '3-day turnaround',
           features: ['30-minute shoot', '5–10 edited photos', 'Online gallery delivery', '3-day turnaround']
         },
         {
           id: 'portrait-standard', badge: 'Tier 2', name: 'Standard Session', popular: true,
-          price: 179, unit: 'flat', priceLabel: '$179',
+          price: 40, unit: 'flat', priceLabel: '$40',
           summary: 'More time, more selects.',
           turnaround: '3-day turnaround',
           features: ['45-minute shoot', '10–15 edited photos', 'Online gallery delivery', '3-day turnaround']
         },
         {
           id: 'portrait-premium', badge: 'Tier 3', name: 'Premium Session',
-          price: 299, unit: 'flat', priceLabel: '$299',
+          price: 75, unit: 'flat', priceLabel: '$75',
           summary: 'The full sitting, more looks.',
           turnaround: '3-day turnaround',
           features: ['1-hour shoot', '20–30 edited photos', 'Online gallery delivery', '3-day turnaround']
